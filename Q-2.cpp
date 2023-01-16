@@ -1,15 +1,15 @@
 
 #include <algorithm>
 #include <iostream>
+#include <vector>
 using namespace std;
-bool sort_col(const vector<int>& v1, const vector<int>& v2)
+int c;
+bool sortcol(const vector<int>& v1, const vector<int>& v2)
 {
-	int c;
-	cin>>c;
+	
 	return v1[c] < v2[c];
 }
 
-// Driver Code
 int main()
 {
      int rows,cols; 
@@ -30,7 +30,9 @@ int main()
             cout << arr_2D[i][j] << " ";
         cout << endl;
     }
-	sort(arr_2D.begin(), arr_2D.end(), sort_col);
+    cout<<"Enter cols index ";
+    cin>>c;
+	sort(arr_2D.begin(), arr_2D.end(), sortcol);
 	cout << "The 2D Array after sorting is:\n";
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j <cols; j++)
